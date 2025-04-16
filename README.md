@@ -79,7 +79,7 @@ app.add_middleware(
 
 All endpoints are documented and testable using FastAPI’s built-in Swagger docs:
 
-📍 http://localhost:8000/docs
+📍 http://localhost:3000/docs
 📣 Future Enhancements
 
     ✅ Persist sessions with token refresh
