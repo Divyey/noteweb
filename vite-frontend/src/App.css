@@ -1,0 +1,181 @@
+/* Root variables for easy theming */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --text-color: #333;
+  --light-text: #777;
+  --background-color: #f4f4f4;
+  --card-background: #fff;
+  --border-radius: 5px;
+  --box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --spacing: 1.5rem;
+  --spacing-sm: 0.75rem;
+}
+
+/* Basic reset and body styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Main container to center content */
+#root {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing);
+}
+
+/* Header with a modern, professional look */
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  margin-bottom: var(--spacing);
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+/* Footer styling for a subtle presence */
+footer {
+  text-align: center;
+  padding: var(--spacing-sm);
+  margin-top: var(--spacing);
+  color: var(--light-text);
+  border-top: 1px solid #ddd;
+}
+
+/* Button styling for a clean, clickable appearance */
+button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: var(--transition);
+  margin-bottom: 10px;
+}
+
+/* Input and textarea styles for readability */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+  width: 98%;
+  padding: 0.75rem;
+  margin-bottom: var(--spacing-sm);
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Card styling for a clean, content-focused look */
+.card,
+.create-area,
+.login-container,
+.create-user {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+
+/* Notes grid layout */
+.notes-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing);
+}
+
+/* Individual note styles */
+.note {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: var(--spacing);
+  transition: var(--transition);
+}
+
+.note h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.note p {
+  color: var(--light-text);
+}
+
+/* Action buttons inside notes */
+.note .note-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Edit and delete buttons in notes */
+.edit-button,
+.delete-button {
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: var(--transition);
+}
+
+
+
+/* Create area for adding notes */
+.create-area h3 {
+  text-align: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.create-area form {
+  display: flex;
+  flex-direction: column;
+}
+
+.create-area button {
+  align-self: flex-end;
+}
+
+/* Login and Create User components */
+.login-container,
+.create-user {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing);
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .notes-container {
+    grid-template-columns: 1fr;
+  }
+}
